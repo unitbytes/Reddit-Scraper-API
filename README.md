@@ -9,7 +9,7 @@
 
 **The fastest zero-login Reddit Scraper API suite on Apify ($1 / 1,000 items). Extract subreddit feeds, keyword brand mentions, posts, and deep nested comment trees to JSON, CSV, Python, or n8n.**
 
-[**🚀 Try Live on Apify**](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 22 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
+[**🚀 Try Live on Apify**](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 23 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
 
 </div>
 
@@ -38,13 +38,13 @@ This repository contains ready-to-run **Python SDK scripts**, **1-click n8n auto
 
 | Extraction Engine | 🐍 Python SDK Quickstart | ⚡ n8n Workflow Template | 📊 Sample Output | 🚀 Cloud Console |
 | :--- | :--- | :--- | :---: | :---: |
-| **Reddit Scraper: Posts, Comments & Search**<br><sub>[`unitbytes/reddit-scraper`](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_scraper.py`](examples/run_reddit_scraper.py) | [`n8n/reddit-scraper-n8n-workflow.json`](n8n/reddit-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-scraper-sample.json) · [`CSV`](samples/reddit-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) |
-| **Reddit Search Scraper: Keyword Monitoring & Brand Mentions**<br><sub>[`unitbytes/reddit-search-scraper`](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-search-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_search_scraper.py`](examples/run_reddit_search_scraper.py) | [`n8n/reddit-search-scraper-n8n-workflow.json`](n8n/reddit-search-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-search-scraper-sample.json) · [`CSV`](samples/reddit-search-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_reddit) |
-| **Reddit Comments Scraper: Nested Reply Trees & Sentiment**<br><sub>[`unitbytes/reddit-comments-scraper`](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-comments-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_comments_scraper.py`](examples/run_reddit_comments_scraper.py) | [`n8n/reddit-comments-scraper-n8n-workflow.json`](n8n/reddit-comments-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-comments-scraper-sample.json) · [`CSV`](samples/reddit-comments-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_reddit) |
-| **Reddit Subreddit Scraper: Hot, New & Top Feeds**<br><sub>[`unitbytes/reddit-subreddits-scraper`](https://apify.com/unitbytes/reddit-subreddits-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-subreddits-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_subreddits_scraper.py`](examples/run_reddit_subreddits_scraper.py) | [`n8n/reddit-subreddits-scraper-n8n-workflow.json`](n8n/reddit-subreddits-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-subreddits-scraper-sample.json) · [`CSV`](samples/reddit-subreddits-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-subreddits-scraper?fpr=939u3w&fp_sid=gh_reddit) |
+| **Reddit Media & API Scraper: Posts, Users & Comments**<br><sub>[`unitbytes/reddit-scraper`](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_scraper.py`](examples/run_reddit_scraper.py) | [`n8n/reddit-scraper-n8n-workflow.json`](n8n/reddit-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-scraper-sample.json) · [`CSV`](samples/reddit-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) |
+| **Reddit Brand Monitoring & Search Scraper: B2B Leads**<br><sub>[`unitbytes/reddit-search-scraper`](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-search-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_search_scraper.py`](examples/run_reddit_search_scraper.py) | [`n8n/reddit-search-scraper-n8n-workflow.json`](n8n/reddit-search-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-search-scraper-sample.json) · [`CSV`](samples/reddit-search-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_reddit) |
+| **Reddit Comment Tree & Replies Scraper: Sentiment**<br><sub>[`unitbytes/reddit-comments-scraper`](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-comments-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_comments_scraper.py`](examples/run_reddit_comments_scraper.py) | [`n8n/reddit-comments-scraper-n8n-workflow.json`](n8n/reddit-comments-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-comments-scraper-sample.json) · [`CSV`](samples/reddit-comments-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_reddit) |
+| **Reddit Hot Posts & Trending Subreddit Scraper**<br><sub>[`unitbytes/reddit-subreddits-scraper`](https://apify.com/unitbytes/reddit-subreddits-scraper?fpr=939u3w&fp_sid=gh_reddit) • [Full Schema](https://unitbytes.com/actors/reddit-subreddits-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)</sub> | [`examples/run_reddit_subreddits_scraper.py`](examples/run_reddit_subreddits_scraper.py) | [`n8n/reddit-subreddits-scraper-n8n-workflow.json`](n8n/reddit-subreddits-scraper-n8n-workflow.json) | [`JSON`](samples/reddit-subreddits-scraper-sample.json) · [`CSV`](samples/reddit-subreddits-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/reddit-subreddits-scraper?fpr=939u3w&fp_sid=gh_reddit) |
 
 - 🤖 **Cursor, Windsurf & Claude Code MCP Ready:** Includes [`.cursor/mcp.json`](.cursor/mcp.json) pre-configured with `https://mcp.apify.com` so AI coding agents can invoke these UnitBytes scrapers natively.
-- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 22 pre-built scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
+- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 23 pre-built scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
 - 📚 **Engineering Playbook:** Read **[Reddit API Pricing in 2026 ($0.24/1K Calls) vs. $0.0005 Pay-Per-Result Alternatives](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)** or browse all scraping & automation guides at **[unitbytes.com/blog](https://unitbytes.com/blog/)**.
 <!-- UNITBYTES_REPO_KIT_END -->
 
@@ -52,9 +52,9 @@ This repository contains ready-to-run **Python SDK scripts**, **1-click n8n auto
 
 ## 🛠️ Extraction Engines in This Suite
 
-### 🚀 Reddit Scraper: Posts, Comments & Search (`unitbytes/reddit-scraper`)
+### 🚀 Reddit Media & API Scraper: Posts, Users & Comments (`unitbytes/reddit-scraper`)
 
-Fast, unlimited Reddit scraper & API alternative. Extract posts, comment trees, keyword searches, subreddits, and users with zero API keys. 1-click clean export to Excel, CSV, and AI agent JSON.
+Reddit scraper API, Reddit media downloader, and Reddit user posts extractor. Scrape Reddit hot posts, Reddit replies, Reddit RAG & Reddit LLM datasets.
 
 - **Pricing:** `$0.001 / item` (Pay-Per-Event — $0.001 reddit post / comment scraped (volume tiers from $0.0005))
 - **Cloud Console:** [https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit)
@@ -123,11 +123,11 @@ Yes. Enable scrapeComments and set maxCommentsPerPost to extract post discussion
 
 ---
 
-### 🚀 Reddit Search Scraper: Keyword Monitoring & Brand Mentions (`unitbytes/reddit-search-scraper`)
+### 🚀 Reddit Brand Monitoring & Search Scraper: B2B Leads (`unitbytes/reddit-search-scraper`)
 
-Real-time Reddit search across 5 dimensions: Posts, Communities, Users, Media, and Comments. Monitor brand keywords and competitor mentions with zero API keys. Export instant CSV/JSON alerts.
+Reddit lead generation, Reddit B2B leads, and Reddit brand monitoring search scraper. Track Reddit brand mentions and Reddit keyword monitor alerts.
 
-- **Pricing:** `$0.004 / item` (Pay-Per-Event — $0.004 result scraped (volume tiers from $0.0005))
+- **Pricing:** `$0.001 / item` (Pay-Per-Event — $0.001 result scraped (volume tiers from $0.0005))
 - **Cloud Console:** [https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_reddit](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_reddit)
 - **Full Documentation & Schema:** [https://unitbytes.com/actors/reddit-search-scraper/](https://unitbytes.com/actors/reddit-search-scraper/)
 - **n8n Workflow File:** [`n8n/reddit-search-scraper-n8n-workflow.json`](n8n/reddit-search-scraper-n8n-workflow.json)
@@ -160,21 +160,22 @@ for item in client.dataset(run["defaultDatasetId"]).iterate_items():
 ```json
 {
   "itemType": "post",
-  "id": "t3_1x0b0f5",
+  "id": "1x0b0f5",
   "title": "Top AI tools changing small business operations in 2026",
   "subreddit": "smallbusiness",
   "author": "digital_growth_lead",
   "score": 420,
   "upvoteRatio": 0.94,
   "numComments": 85,
+  "postType": "image",
   "url": "https://www.reddit.com/r/smallbusiness/comments/1x0b0f5/...",
   "permalink": "https://www.reddit.com/r/smallbusiness/comments/1x0b0f5/...",
-  "createdAt": "2026-10-10T14:20:00Z",
+  "createdAt": "2026-10-10T14:20:00.000Z",
   "mediaUrls": [
     "https://i.redd.it/example_asset.jpg"
   ],
   "searchQuery": "AI tools",
-  "scrapedAt": "2026-10-11T16:00:00Z"
+  "scrapedAt": "2026-10-11T16:00:00.000Z"
 }
 ```
 
@@ -193,11 +194,11 @@ The actor finishes cleanly with exit code 0, outputs an empty dataset, and charg
 
 ---
 
-### 🚀 Reddit Comments Scraper: Nested Reply Trees & Sentiment (`unitbytes/reddit-comments-scraper`)
+### 🚀 Reddit Comment Tree & Replies Scraper: Sentiment (`unitbytes/reddit-comments-scraper`)
 
-Extract full Reddit comment trees and discussions from any post URL. Scrapes deep nested hierarchies, author sentiment, upvotes, and timestamps with zero API keys. Clean tabular CSV/JSON export.
+Reddit replies scraper and Reddit comment tree extractor for Reddit sentiment analysis. Scrape full Reddit thread discussions and nested replies.
 
-- **Pricing:** `$0.004 / item` (Pay-Per-Event — $0.004 result scraped (volume tiers from $0.0005))
+- **Pricing:** `$0.001 / item` (Pay-Per-Event — $0.001 result scraped (volume tiers from $0.0005))
 - **Cloud Console:** [https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_reddit](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_reddit)
 - **Full Documentation & Schema:** [https://unitbytes.com/actors/reddit-comments-scraper/](https://unitbytes.com/actors/reddit-comments-scraper/)
 - **n8n Workflow File:** [`n8n/reddit-comments-scraper-n8n-workflow.json`](n8n/reddit-comments-scraper-n8n-workflow.json)
@@ -226,23 +227,24 @@ run_input = {
 run = client.actor("unitbytes/reddit-comments-scraper").call(run_input=run_input)
 
 for item in client.dataset(run["defaultDatasetId"]).iterate_items():
-    print(item.get("itemType"), item.get("postId"), item.get("parentId"))
+    print(item.get("itemType"), item.get("postId"), item.get("author"))
 ```
 
 #### Sample Output Schema (`samples/reddit-comments-scraper-sample.json`)
 ```json
 {
   "itemType": "comment",
-  "id": "t1_m3k0x1y",
-  "postId": "t3_1x0b0f5",
-  "parentId": "t3_1x0b0f5",
+  "id": "m3k0x1y",
+  "postId": "1x0b0f5",
+  "parentId": null,
   "author": "tech_enthusiast",
   "body": "Streaming platforms need stricter auditing mechanisms. 10k bots running 24/7 is an insane amount of synthetic streams.",
   "score": 342,
   "depth": 0,
-  "createdAt": "2026-10-11T12:30:15Z",
+  "isSubmitter": false,
+  "createdAt": "2026-10-11T12:30:15.000Z",
   "permalink": "https://www.reddit.com/r/technology/comments/1x0b0f5/comment/m3k0x1y/",
-  "scrapedAt": "2026-10-11T16:01:26Z"
+  "scrapedAt": "2026-10-11T16:01:26.000Z"
 }
 ```
 
@@ -261,11 +263,11 @@ Extraction starts at $0.50 to $1.00 per 1,000 comments under Apify Pay-Per-Event
 
 ---
 
-### 🚀 Reddit Subreddit Scraper: Hot, New & Top Feeds (`unitbytes/reddit-subreddits-scraper`)
+### 🚀 Reddit Hot Posts & Trending Subreddit Scraper (`unitbytes/reddit-subreddits-scraper`)
 
-Scrape any subreddit feed (Hot, New, Top, Rising) with custom date filters. Extract unlimited posts, community engagement scores, and permanent media links in seconds. 1-click clean Excel/CSV export.
+Reddit trending subreddit scraper and Reddit hot posts extractor. Scrape any Reddit community feed (Hot, New, Top, Rising) with HD media links.
 
-- **Pricing:** `$0.004 / item` (Pay-Per-Event — $0.004 result scraped (volume tiers from $0.0005))
+- **Pricing:** `$0.001 / item` (Pay-Per-Event — $0.001 result scraped (volume tiers from $0.0005))
 - **Cloud Console:** [https://apify.com/unitbytes/reddit-subreddits-scraper?fpr=939u3w&fp_sid=gh_reddit](https://apify.com/unitbytes/reddit-subreddits-scraper?fpr=939u3w&fp_sid=gh_reddit)
 - **Full Documentation & Schema:** [https://unitbytes.com/actors/reddit-subreddits-scraper/](https://unitbytes.com/actors/reddit-subreddits-scraper/)
 - **n8n Workflow File:** [`n8n/reddit-subreddits-scraper-n8n-workflow.json`](n8n/reddit-subreddits-scraper-n8n-workflow.json)
@@ -298,7 +300,7 @@ for item in client.dataset(run["defaultDatasetId"]).iterate_items():
 ```json
 {
   "itemType": "post",
-  "id": "t3_1x0b0f5",
+  "id": "1x0b0f5",
   "title": "Major cybersecurity update released for enterprise systems",
   "subreddit": "technology",
   "author": "security_researcher",
@@ -308,7 +310,7 @@ for item in client.dataset(run["defaultDatasetId"]).iterate_items():
   "postType": "link",
   "url": "https://www.reddit.com/r/technology/comments/1x0b0f5/...",
   "permalink": "https://www.reddit.com/r/technology/comments/1x0b0f5/...",
-  "createdAt": "2026-10-11T10:15:00Z",
+  "createdAt": "2026-10-11T10:15:00.000Z",
   "selftext": "",
   "flair": "Cybersecurity",
   "isOver18": false,
@@ -316,7 +318,7 @@ for item in client.dataset(run["defaultDatasetId"]).iterate_items():
   "mediaUrls": [
     "https://i.redd.it/security_infographic.png"
   ],
-  "scrapedAt": "2026-10-11T16:00:00Z"
+  "scrapedAt": "2026-10-11T16:00:00.000Z"
 }
 ```
 
@@ -363,6 +365,6 @@ Don't want to manage API tokens or scripts? **UnitBytes Data Delivery** provides
 
 - 🌐 **Request a Sample Dataset:** [https://unitbytes.com/#enterprise-intake](https://unitbytes.com/#enterprise-intake)
 - 📧 **Direct Engineering Contact:** [contact@unitbytes.com](mailto:contact@unitbytes.com)
-- ⚡ **Explore All 22 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
+- ⚡ **Explore All 23 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
 - 📚 **Engineering Playbooks & Guides:** [https://unitbytes.com/blog/](https://unitbytes.com/blog/)
 - 🔗 **Official n8n Creator Profile:** [https://n8n.io/creators/unitbytes/](https://n8n.io/creators/unitbytes/)

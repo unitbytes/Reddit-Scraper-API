@@ -1,2 +1,2 @@
-itemType,id,postId,parentId,author,body,score,depth,createdAt,permalink,scrapedAt
-comment,t1_m3k0x1y,t3_1x0b0f5,t3_1x0b0f5,tech_enthusiast,Streaming platforms need stricter auditing mechanisms. 10k bots running 24/7 is an insane amount of synthetic streams.,342,0,2026-10-11T12:30:15Z,https://www.reddit.com/r/technology/comments/1x0b0f5/comment/m3k0x1y/,2026-10-11T16:01:26Z
+itemType,id,postId,parentId,author,body,score,depth,isSubmitter,createdAt,permalink,scrapedAt
+comment,m3k0x1y,1x0b0f5,,tech_enthusiast,Streaming platforms need stricter auditing mechanisms. 10k bots running 24/7 is an insane amount of synthetic streams.,342,0,False,2026-10-11T12:30:15.000Z,https://www.reddit.com/r/technology/comments/1x0b0f5/comment/m3k0x1y/,2026-10-11T16:01:26.000Z

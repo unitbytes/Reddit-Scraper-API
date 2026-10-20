@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Reddit Comments Scraper: Nested Reply Trees & Sentiment — Official Python SDK Quickstart
+Reddit Comment Tree & Replies Scraper: Sentiment — Official Python SDK Quickstart
 Actor: https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=gh_py
 Docs & Schema: https://unitbytes.com/actors/reddit-comments-scraper/
 n8n Template: https://unitbytes.com/n8n/workflows/reddit-comments-scraper-n8n-workflow.json
@@ -27,4 +27,4 @@ run_input = {
 run = client.actor("unitbytes/reddit-comments-scraper").call(run_input=run_input)
 
 for item in client.dataset(run["defaultDatasetId"]).iterate_items():
-    print(item.get("itemType"), item.get("postId"), item.get("parentId"))
+    print(item.get("itemType"), item.get("postId"), item.get("author"))

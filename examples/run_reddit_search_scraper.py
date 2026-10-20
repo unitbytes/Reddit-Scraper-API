@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Reddit Search Scraper: Keyword Monitoring & Brand Mentions — Official Python SDK Quickstart
+Reddit Brand Monitoring & Search Scraper: B2B Leads — Official Python SDK Quickstart
 Actor: https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=gh_py
 Docs & Schema: https://unitbytes.com/actors/reddit-search-scraper/
 n8n Template: https://unitbytes.com/n8n/workflows/reddit-search-scraper-n8n-workflow.json

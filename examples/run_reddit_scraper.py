@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Reddit Scraper: Posts, Comments & Search — Official Python SDK Quickstart
+Reddit Media & API Scraper: Posts, Users & Comments — Official Python SDK Quickstart
 Actor: https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_py
 Docs & Schema: https://unitbytes.com/actors/reddit-scraper/
 n8n Template: https://unitbytes.com/n8n/workflows/reddit-scraper-n8n-workflow.json
