@@ -1,0 +1,253 @@
+{
+  "name": "Reddit Search Scraper: Keyword Monitoring & Brand Mentions — Automated Extraction to CSV & Sheets (UnitBytes)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ Reddit Search Scraper: Keyword Monitoring & Brand Mentions — Automated n8n Pipeline\n**Powered by [UnitBytes on Apify](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=n8n_io)** ($0.004 / item)\n\n### ⚙️ How It Works\nThis workflow runs on a schedule, calls the **[reddit-search-scraper Apify Actor](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=n8n_io)** via its synchronous REST endpoint, normalizes the extracted fields (`itemType, id, title, subreddit, author`), and exports a clean CSV file.\n\n### 🚀 30-Second Setup Instructions\n1. **Get your free Apify API Token**: Open [reddit-search-scraper on Apify Store](https://apify.com/unitbytes/reddit-search-scraper?fpr=939u3w&fp_sid=n8n_io) and copy your API token from **Settings → Integrations**.\n2. **Paste your token & search parameters**: Double-click the **\"1. Set Apify Token & Input\"** node and replace `YOUR_APIFY_API_TOKEN` with your token.\n3. **Click \"Test Workflow\"**: The HTTP Request node calls the synchronous UnitBytes Apify endpoint, normalizes the extracted records, and exports a clean CSV file ready for Google Sheets, Airtable, Slack, or OpenAI.\n\n📖 **Documentation & Schema Reference**: [https://unitbytes.com/actors/reddit-search-scraper/](https://unitbytes.com/actors/reddit-search-scraper/)",
+        "height": 380,
+        "width": 520,
+        "color": 4
+      },
+      "id": "7fbb201f-8db4-51a9-a5ba-9a78fb98450c",
+      "name": "Sticky Note — Setup Guide",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### 📊 Connect Your Destination\nThe **\"3. Normalize Output Fields\"** node outputs flat records (`itemType, id, title, subreddit, author`).\n\n- **Google Sheets / Airtable**: Connect a Google Sheets (`Append or Update Row`) node after Step 3.\n- **Slack / Telegram / Email Alerts**: Connect a Filter node + Slack node to alert your team on new deals or reviews.\n- **AI Agent / OpenAI**: Connect an OpenAI / LLM Chain node to summarize or classify extracted items.",
+        "height": 220,
+        "width": 420,
+        "color": 5
+      },
+      "id": "50682194-5882-56e0-90f9-2f9fb024b7ba",
+      "name": "Sticky Note — Destinations",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "5c05e113-304b-51cf-8adf-5e093b00882c",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        220,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0c913631-9cf9-529f-af45-236244ba09b8",
+              "name": "apifyToken",
+              "value": "YOUR_APIFY_API_TOKEN",
+              "type": "string"
+            },
+            {
+              "id": "8b7f49ef-0b3c-5fa6-ae04-65f1b4f6c297",
+              "name": "actorInput",
+              "value": "{\"searchQuery\": \"artificial intelligence\", \"subreddit\": \"\"}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "03e77fb3-e9ad-5994-9ee9-4e8d5f9c744a",
+      "name": "1. Set Apify Token & Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.apify.com/v2/acts/unitbytes~reddit-search-scraper/run-sync-get-dataset-items?token={{ $json.apifyToken }}&format=json&clean=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.actorInput) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "abfa82ec-afce-5055-97d8-850790907eb0",
+      "name": "2. Run UnitBytes (reddit-search-scraper)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a84f76fe-2ae6-5246-b9d2-7dac91b46834",
+              "name": "itemType",
+              "value": "={{ $json.itemType }}",
+              "type": "string"
+            },
+            {
+              "id": "5ac047db-4d0f-5fe3-9c36-7893ddf0d142",
+              "name": "id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "5cef9bac-ae91-5e18-88bd-f7a40b2b1ba1",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "854ea060-bf18-5bd9-b7ed-6076b6788ed3",
+              "name": "subreddit",
+              "value": "={{ $json.subreddit }}",
+              "type": "string"
+            },
+            {
+              "id": "53b94cb6-5111-58c1-bb1f-b9acc88f6d3b",
+              "name": "author",
+              "value": "={{ $json.author }}",
+              "type": "string"
+            },
+            {
+              "id": "1a1e2325-d66d-503b-816c-9eaed6e8685e",
+              "name": "score",
+              "value": "={{ $json.score }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "63b43093-204a-513c-9408-b02033a80bb0",
+      "name": "3. Normalize Output Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        940,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "reddit-search-scraper-dataset-export.csv"
+        }
+      },
+      "id": "57f979af-04a1-5115-8190-a41405068387",
+      "name": "4. Export to CSV File",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        480
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "1. Set Apify Token & Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Set Apify Token & Input": {
+      "main": [
+        [
+          {
+            "node": "2. Run UnitBytes (reddit-search-scraper)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Run UnitBytes (reddit-search-scraper)": {
+      "main": [
+        [
+          {
+            "node": "3. Normalize Output Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Normalize Output Fields": {
+      "main": [
+        [
+          {
+            "node": "4. Export to CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "030f9420-0ca8-5240-8fe8-208e287a8b19"
+  },
+  "tags": [
+    {
+      "name": "Web Scraping"
+    },
+    {
+      "name": "Apify"
+    },
+    {
+      "name": "UnitBytes"
+    },
+    {
+      "name": "Social Media & Community Data"
+    }
+  ]
+}

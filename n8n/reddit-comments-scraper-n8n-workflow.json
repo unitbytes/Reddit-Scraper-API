@@ -1,0 +1,253 @@
+{
+  "name": "Reddit Comments Scraper: Nested Reply Trees & Sentiment — Automated Extraction to CSV & Sheets (UnitBytes)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ Reddit Comments Scraper: Nested Reply Trees & Sentiment — Automated n8n Pipeline\n**Powered by [UnitBytes on Apify](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=n8n_io)** ($0.004 / item)\n\n### ⚙️ How It Works\nThis workflow runs on a schedule, calls the **[reddit-comments-scraper Apify Actor](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=n8n_io)** via its synchronous REST endpoint, normalizes the extracted fields (`itemType, id, postId, parentId, author`), and exports a clean CSV file.\n\n### 🚀 30-Second Setup Instructions\n1. **Get your free Apify API Token**: Open [reddit-comments-scraper on Apify Store](https://apify.com/unitbytes/reddit-comments-scraper?fpr=939u3w&fp_sid=n8n_io) and copy your API token from **Settings → Integrations**.\n2. **Paste your token & search parameters**: Double-click the **\"1. Set Apify Token & Input\"** node and replace `YOUR_APIFY_API_TOKEN` with your token.\n3. **Click \"Test Workflow\"**: The HTTP Request node calls the synchronous UnitBytes Apify endpoint, normalizes the extracted records, and exports a clean CSV file ready for Google Sheets, Airtable, Slack, or OpenAI.\n\n📖 **Documentation & Schema Reference**: [https://unitbytes.com/actors/reddit-comments-scraper/](https://unitbytes.com/actors/reddit-comments-scraper/)",
+        "height": 380,
+        "width": 520,
+        "color": 4
+      },
+      "id": "d8c300bf-f0fa-5a40-b467-0c4c5dcd3a58",
+      "name": "Sticky Note — Setup Guide",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### 📊 Connect Your Destination\nThe **\"3. Normalize Output Fields\"** node outputs flat records (`itemType, id, postId, parentId, author`).\n\n- **Google Sheets / Airtable**: Connect a Google Sheets (`Append or Update Row`) node after Step 3.\n- **Slack / Telegram / Email Alerts**: Connect a Filter node + Slack node to alert your team on new deals or reviews.\n- **AI Agent / OpenAI**: Connect an OpenAI / LLM Chain node to summarize or classify extracted items.",
+        "height": 220,
+        "width": 420,
+        "color": 5
+      },
+      "id": "273db1ce-73b3-5b6a-9e96-93186f17cabd",
+      "name": "Sticky Note — Destinations",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "b6952635-6eb7-5836-a56a-a340719cac43",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        220,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cdd688dd-5516-53ab-9fa5-13990e05d309",
+              "name": "apifyToken",
+              "value": "YOUR_APIFY_API_TOKEN",
+              "type": "string"
+            },
+            {
+              "id": "345a20f0-3a34-52dd-b4f4-54f915c2eb2e",
+              "name": "actorInput",
+              "value": "{\"startUrls\": [{\"url\": \"https://www.reddit.com/r/technology/comments/1x0b0f5/fraudster_jailed_for_using_10k_bots_and_ai_songs/\"}]}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5f6495f4-517e-5b1e-90b0-c8a1211252ba",
+      "name": "1. Set Apify Token & Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.apify.com/v2/acts/unitbytes~reddit-comments-scraper/run-sync-get-dataset-items?token={{ $json.apifyToken }}&format=json&clean=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.actorInput) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "f8b9ed7d-3563-57f8-a021-a9e8dda338c1",
+      "name": "2. Run UnitBytes (reddit-comments-scraper)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "54b52ff9-5828-5d9d-a409-b1cb8b91daed",
+              "name": "itemType",
+              "value": "={{ $json.itemType }}",
+              "type": "string"
+            },
+            {
+              "id": "1c64e979-ff55-5b12-836c-fc9a9030299f",
+              "name": "id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "8691fe8d-5a64-557e-8474-0d61183dd061",
+              "name": "postId",
+              "value": "={{ $json.postId }}",
+              "type": "string"
+            },
+            {
+              "id": "f2deeab3-097a-505e-9826-874607148dbe",
+              "name": "parentId",
+              "value": "={{ $json.parentId }}",
+              "type": "string"
+            },
+            {
+              "id": "9f880a70-24bb-580b-8a82-4c8750bc0e21",
+              "name": "author",
+              "value": "={{ $json.author }}",
+              "type": "string"
+            },
+            {
+              "id": "accb3d23-bdd9-5186-a921-d5bcc577e267",
+              "name": "body",
+              "value": "={{ $json.body }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "873aaebe-79ed-5ded-afbf-3526bc45cabb",
+      "name": "3. Normalize Output Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        940,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "reddit-comments-scraper-dataset-export.csv"
+        }
+      },
+      "id": "da97a032-ab41-5ab6-bd06-a4312a80b900",
+      "name": "4. Export to CSV File",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        480
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "1. Set Apify Token & Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Set Apify Token & Input": {
+      "main": [
+        [
+          {
+            "node": "2. Run UnitBytes (reddit-comments-scraper)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Run UnitBytes (reddit-comments-scraper)": {
+      "main": [
+        [
+          {
+            "node": "3. Normalize Output Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Normalize Output Fields": {
+      "main": [
+        [
+          {
+            "node": "4. Export to CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "030f9420-0ca8-5240-8fe8-208e287a8b19"
+  },
+  "tags": [
+    {
+      "name": "Web Scraping"
+    },
+    {
+      "name": "Apify"
+    },
+    {
+      "name": "UnitBytes"
+    },
+    {
+      "name": "Social Media & Community Data"
+    }
+  ]
+}
