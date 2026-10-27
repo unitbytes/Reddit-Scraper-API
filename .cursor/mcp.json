@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "unitbytes-apify": {
+      "type": "http",
+      "url": "https://mcp.apify.com/?tools=actors,docs,unitbytes/reddit-scraper,unitbytes/reddit-search-scraper,unitbytes/reddit-comments-scraper,unitbytes/reddit-subreddits-scraper"
+    }
+  }
+}
