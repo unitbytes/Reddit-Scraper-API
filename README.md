@@ -100,7 +100,7 @@ Scrape Reddit posts, subreddits, comments, user profiles & HD media without API 
 | `scrapeComments` | `boolean` | — | Whether to extract comment threads and full post bodies for posts discovered in Subreddit or Search feeds. (Direct Post URLs always extract comments unless disabled). |
 | `maxCommentsPerPost` | `integer` | `20` | Maximum number of top-level and nested comments to extract per post. |
 | `proxyConfiguration` | `object` | `{"useApifyProxy": true, "apifyProxyGroups": ["RE` | Residential proxy configuration. Reddit blocks datacenter IPs, so residential proxies are automatically enforced by default for high reliability. |
-| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (http://user:pass@host:port). If provided, it will be prioritized before falling back to Apify Residential. |
+| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (e.g. cloud extraction). If provided, it will be prioritized before falling back to Apify Residential. |
 
 #### ⚡ Real-Time Synchronous REST API (RapidAPI Hub & Zyla API Hub — `<500ms` GET)
 
@@ -209,7 +209,7 @@ Search Reddit posts, comments, communities, users & media by keyword. Fast Reddi
 | `scrapeComments` | `boolean` | `False` | When searching Posts, enable this to also fetch the full post body (selftext) and nested comment threads for each post. |
 | `maxCommentsPerPost` | `integer` | `20` | Maximum number of top-level and nested comments to extract per post when 'Extract Full Post Body & Comments' is enabled. |
 | `proxyConfiguration` | `object` | `{"useApifyProxy": true, "apifyProxyGroups": ["RE` | Residential proxy configuration. Reddit blocks datacenter IPs, so residential proxies are automatically enforced by default for high reliability. |
-| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (http://user:pass@host:port). If provided, it will be prioritized before falling back to Apify Residential. |
+| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (e.g. cloud extraction). If provided, it will be prioritized before falling back to Apify Residential. |
 
 #### Python SDK Quickstart (`examples/run_reddit_search_scraper.py`)
 ```python
@@ -297,7 +297,7 @@ Scrape Reddit comments, full comment trees, and nested replies from any post URL
 | `startUrls` *(Required)* | `array` | `[{"url": "https://www.reddit.com/r/technology/co` | Direct Reddit post URLs to extract nested comment trees from (e.g. https://www.reddit.com/r/technology/comments/1x0b0f5/...). |
 | `maxCommentsPerPost` | `integer` | `100` | Maximum number of top-level comments and nested replies to extract per post. |
 | `proxyConfiguration` | `object` | `{"useApifyProxy": true, "apifyProxyGroups": ["RE` | Residential proxy configuration. Reddit blocks datacenter IPs, so residential proxies are automatically enforced by default for high reliability. |
-| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (http://user:pass@host:port). If provided, it will be prioritized before falling back to Apify Residential. |
+| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (e.g. cloud extraction). If provided, it will be prioritized before falling back to Apify Residential. |
 
 #### Python SDK Quickstart (`examples/run_reddit_comments_scraper.py`)
 ```python
@@ -385,7 +385,7 @@ Scrape Reddit subreddits and subreddit posts (Hot, New, Top, Rising) with HD med
 | `scrapeComments` | `boolean` | `False` | Whether to extract comment threads for scraped posts. |
 | `maxCommentsPerPost` | `integer` | `20` | Maximum number of top-level and nested comments to extract per post. |
 | `proxyConfiguration` | `object` | `{"useApifyProxy": true, "apifyProxyGroups": ["RE` | Residential proxy configuration. Reddit blocks datacenter IPs, so residential proxies are automatically enforced by default for high reliability. |
-| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (http://user:pass@host:port). If provided, it will be prioritized before falling back to Apify Residential. |
+| `customProxyUrl` | `string` | — | Optional custom residential proxy URL (e.g. cloud extraction). If provided, it will be prioritized before falling back to Apify Residential. |
 
 #### Python SDK Quickstart (`examples/run_reddit_subreddits_scraper.py`)
 ```python
