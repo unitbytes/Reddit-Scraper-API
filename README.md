@@ -12,7 +12,7 @@
 
 **The fastest zero-login Reddit Scraper API suite on Apify (`$1 / 1,000 items`) and synchronous REST API (`<500ms` GET on RapidAPI Hub & Zyla API Hub). Extract subreddit feeds, 5-tab keyword brand mentions, posts, user profiles, and deep nested comment trees to JSON, CSV, Python, Colab, or n8n.**
 
-[**🚀 Try Live on Apify**](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Reddit-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ RapidAPI Hub**](https://rapidapi.com/unitbytes/api/reddit-community-post-comment-search-data-api) • [**⚡ Zyla API Hub**](https://zylalabs.com/api-marketplace/social+media+%26+networking/reddit+community+post+comment+and+search+data+api/14529) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 39 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
+[**🚀 Try Live on Apify**](https://apify.com/unitbytes/reddit-scraper?fpr=939u3w&fp_sid=gh_reddit) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Reddit-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ RapidAPI Hub**](https://rapidapi.com/unitbytes/api/reddit-community-post-comment-search-data-api) • [**⚡ Zyla API Hub**](https://zylalabs.com/api-marketplace/social+media+%26+networking/reddit+community+post+comment+and+search+data+api/14529) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 41 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
 
 </div>
 
@@ -49,7 +49,7 @@ This repository contains ready-to-run **Python SDK scripts**, an **interactive 1
 
 - 📓 **1-Click Interactive Google Colab Notebook:** Open [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) directly in your browser via [**Google Colab ↗**](https://colab.research.google.com/github/unitbytes/Reddit-Scraper-API/blob/main/notebooks/quickstart.ipynb) to inspect sample DataFrames and test live API queries with zero local setup.
 - 🤖 **Cursor, Windsurf & Claude Code MCP Ready:** Includes [`.cursor/mcp.json`](.cursor/mcp.json) pre-configured with `https://mcp.apify.com` so AI coding agents can invoke these UnitBytes scrapers natively.
-- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 39 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
+- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 41 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
 - 📚 **Engineering Playbook:** Read **[Reddit API Pricing in 2026 (`$0.24/1K` Calls) vs. `$0.0005` Pay-Per-Result Alternatives](https://unitbytes.com/blog/reddit-api-alternatives-pricing-guide/)** or browse all scraping & automation guides at **[unitbytes.com/blog](https://unitbytes.com/blog/)**.
 <!-- UNITBYTES_REPO_KIT_END -->
 
@@ -484,6 +484,6 @@ Don't want to manage API tokens or scripts? **UnitBytes Data Delivery** provides
 
 - 🌐 **Request a Sample Dataset:** [https://unitbytes.com/#enterprise-intake](https://unitbytes.com/#enterprise-intake)
 - 📧 **Direct Engineering Contact:** [contact@unitbytes.com](mailto:contact@unitbytes.com)
-- ⚡ **Explore All 39 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
+- ⚡ **Explore All 41 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
 - 📚 **Engineering Playbooks & Guides:** [https://unitbytes.com/blog/](https://unitbytes.com/blog/)
 - 🔗 **Official n8n Creator Profile:** [https://n8n.io/creators/unitbytes/](https://n8n.io/creators/unitbytes/)
